@@ -1,5 +1,5 @@
 # Project Overview
-React native project displaying Science and Technology articles from the New York Times API
+React native project displaying Science and Technology articles from the [New York Times API](https://developer.nytimes)
 
 # Used Libraries
 * [React Navigation](https://reactnavigation.org/) - Used for the navigation functionality
