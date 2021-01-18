@@ -15,7 +15,7 @@ export const ContentContainer = styled.View`
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 `;
 
 export const ArticleContainer = styled.View`
