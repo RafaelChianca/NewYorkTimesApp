@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { NavigationContainer, TabActions } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import * as Unicons from '@iconscout/react-native-unicons';
-import Home from './pages/Home';
+import Technology from './pages/Technology';
 import Science from './pages/Science';
 
 const Tab = createBottomTabNavigator();
@@ -11,7 +11,7 @@ function Routes() {
     return (
         <NavigationContainer>
              <Tab.Navigator
-                initialRouteName="Home"
+                initialRouteName="Technology"
                 tabBarOptions={{
                     keyboardHidesTabBar: true,
                     style: {
@@ -24,8 +24,8 @@ function Routes() {
                 }}
             >
                 <Tab.Screen 
-                    name="Tech"
-                    component={Home}
+                    name="Technology"
+                    component={Technology}
                     options={{
                         tabBarIcon: ({ focused }) => (
                             <Unicons.UilLightbulbAlt size={28} color={focused ? 'black' : 'lightgrey'}/>
@@ -42,7 +42,6 @@ function Routes() {
                     }}
                 />
             </Tab.Navigator>
-            
         </NavigationContainer>
     );
 }

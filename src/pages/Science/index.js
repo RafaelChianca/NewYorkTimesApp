@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import ArticleList from '../../components/Lists/NewsList';
+import ArticleList from '../../components/Lists/ArticleList';
 import { listScienceRequested } from '../../store/actions/news';
 import { Container, Header } from './styles';
 

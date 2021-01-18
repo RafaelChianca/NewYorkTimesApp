@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import ArticleList from '../../components/Lists/NewsList';
+import ArticleList from '../../components/Lists/ArticleList';
 import { listTechnologyRequested } from '../../store/actions/news';
 import { Container, Header } from './styles';
 
-export default function Home() {
+export default function Technology() {
 
     const dispatch = useDispatch();
     const technology = useSelector(state => state.news.technology);
