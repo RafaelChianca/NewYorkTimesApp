@@ -1,0 +1,36 @@
+/**
+ * @format
+ */
+
+import 'react-native';
+import React from 'react';
+import Science from '../src/pages/Science';
+
+// Note: test renderer must be required after react-native.
+import renderer from 'react-test-renderer';
+import news from '../src/store/reducers/news';
+import { scienceTypes } from '../src/store/actionTypes';
+
+jest.useFakeTimers();
+
+describe('Science GET Reducer', () => {
+  it('Should return dafault state', () => {
+    const newState = news(undefined, {});
+    expect(newState).toEqual({
+      error: false,
+      loading: false,
+      technology: [],
+      science: [],
+    });
+  });
+
+  it('Should return new state if receiving type', () => {
+    const posts = [{ title: 'test1' }, { title: 'test2' }, { title: 'test3' }]
+    const newState = news(undefined, {
+      type: scienceTypes.SUCCEEDED,
+      payload: {scienceList: posts}
+    });
+    expect(newState.science).toEqual(posts);
+  });
+})
+
