@@ -4,16 +4,18 @@
 
 import 'react-native';
 import React from 'react';
-import Science from '../src/pages/Science';
 
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
 import news from '../src/store/reducers/news';
 import { scienceTypes } from '../src/store/actionTypes';
+import { Provider } from 'react-redux';
+import { store } from '../src/store';
+import Science from '../src/pages/Science';
 
 jest.useFakeTimers();
 
-describe('Science GET Reducer', () => {
+describe('Science Reducer', () => {
   it('Should return dafault state', () => {
     const newState = news(undefined, {});
     expect(newState).toEqual({
@@ -32,5 +34,14 @@ describe('Science GET Reducer', () => {
     });
     expect(newState.science).toEqual(posts);
   });
-})
+});
 
+describe('Renders Science page correctly', () => {
+  it('Should render without crashing', () => {
+    renderer.create(
+      <Provider store={store}>
+        <Science />
+      </Provider>
+    );
+  })
+});
