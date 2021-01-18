@@ -27,10 +27,10 @@ describe('Science Reducer', () => {
   });
 
   it('Should return new state if receiving type', () => {
-    const posts = [{ title: 'test1' }, { title: 'test2' }, { title: 'test3' }]
+    const posts = [{ title: 'test1' }, { title: 'test2' }, { title: 'test3' }];
     const newState = news(undefined, {
       type: scienceTypes.SUCCEEDED,
-      payload: {scienceList: posts}
+      payload: { scienceList: posts },
     });
     expect(newState.science).toEqual(posts);
   });
@@ -41,7 +41,7 @@ describe('Renders Science page correctly', () => {
     renderer.create(
       <Provider store={store}>
         <Science />
-      </Provider>
+      </Provider>,
     );
-  })
+  });
 });
