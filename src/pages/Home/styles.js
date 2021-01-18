@@ -3,7 +3,9 @@ import styled from 'styled-components/native';
 
 export const Container = styled(SafeAreaView)`
     flex: 1;
-    padding: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     background-color: white;
 `;
 

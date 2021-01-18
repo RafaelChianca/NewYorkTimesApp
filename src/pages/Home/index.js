@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { FlatList, Text, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import ArticleList from '../../components/Lists/NewsList';
 import { listTechnologyRequested } from '../../store/actions/news';
