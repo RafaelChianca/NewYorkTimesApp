@@ -17,7 +17,6 @@ export default function Home() {
 
     useEffect(() => {
         setTechNews(tecnology);
-        console.log('resposta do sagas', tecnology);
     }, [tecnology])
 
     return (
