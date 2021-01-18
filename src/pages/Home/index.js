@@ -7,21 +7,27 @@ import { Container, Header } from './styles';
 export default function Home() {
 
     const dispatch = useDispatch();
-    const tecnology = useSelector(state => state.news.technology);
+    const technology = useSelector(state => state.news.technology);
     const [techNews, setTechNews] = useState([]);
 
     useEffect(() => {
-        dispatch(listTechnologyRequested(1, 20));
+        requestTechnology();
     }, [])
 
     useEffect(() => {
-        setTechNews(tecnology);
-    }, [tecnology])
+        if (technology) {
+            setTechNews(technology);
+        }
+    }, [technology])
+
+    function requestTechnology () {
+        dispatch(listTechnologyRequested());
+    }
 
     return (
         <Container>
             <Header>Technology</Header>
-            <ArticleList articles={techNews} />
+            <ArticleList reloadFunction={requestTechnology} articles={techNews} />
         </Container>
     );
 }

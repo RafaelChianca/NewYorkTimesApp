@@ -11,17 +11,21 @@ export default function Science() {
     const [scienceNews, setScienceNews] = useState([]);
 
     useEffect(() => {
-        dispatch(listScienceRequested(1, 20));
+        requestScience();
     }, [])
 
     useEffect(() => {
         setScienceNews(science);
     }, [science])
 
+    function requestScience () {
+        dispatch(listScienceRequested());
+    }
+
     return (
         <Container>
             <Header>Science</Header>
-            <ArticleList articles={scienceNews} />
+            <ArticleList reloadFunction={requestScience} articles={scienceNews} />
         </Container>
     );
 }
