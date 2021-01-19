@@ -45,3 +45,15 @@ describe('Renders Technology page correctly', () => {
     );
   })
 });
+
+describe('Technology page Snapshot test', () => {
+  test('Should be equal to snapshot', () => {
+    const snap = renderer.create(
+      <Provider store={store}>
+        <Technology />
+      </Provider>,
+    ).toJSON();
+
+    expect(snap).toMatchSnapshot();
+  });
+});
