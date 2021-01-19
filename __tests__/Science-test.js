@@ -45,3 +45,15 @@ describe('Renders Science page correctly', () => {
     );
   });
 });
+
+describe('Science page Snapshot test', () => {
+  test('Should be equal to snapshot', () => {
+    const snap = renderer.create(
+      <Provider store={store}>
+        <Science />
+      </Provider>,
+    ).toJSON();
+
+    expect(snap).toMatchSnapshot();
+  });
+});

@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Science page Snapshot test Should be equal to snapshot 1`] = `
+<RNCSafeAreaView
+  style={
+    Array [
+      Object {
+        "backgroundColor": "white",
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "paddingLeft": 20,
+        "paddingRight": 20,
+        "paddingTop": 20,
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "fontSize": 30,
+          "fontWeight": "bold",
+          "marginBottom": 20,
+        },
+      ]
+    }
+  >
+    Science
+  </Text>
+  <RCTScrollView
+    ListEmptyComponent={
+      <Styled(Component)
+        onPress={[Function]}
+      >
+        <Styled(Text)>
+          Click to reload
+        </Styled(Text)>
+      </Styled(Component)>
+    }
+    data={Array []}
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={2}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    showsVerticalScrollIndicator={false}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onLayout={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "black",
+            "height": 50,
+            "justifyContent": "center",
+            "opacity": 1,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontSize": 14,
+                "textTransform": "capitalize",
+              },
+            ]
+          }
+        >
+          Click to reload
+        </Text>
+      </View>
+    </View>
+  </RCTScrollView>
+</RNCSafeAreaView>
+`;
