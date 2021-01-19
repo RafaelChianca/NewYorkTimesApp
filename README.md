@@ -27,3 +27,5 @@ run `yarn android`
 # Running the tests
 
 run `yarn test`
+
+If the snapshot tests fail due to any change in code simply run `yarn test -u` before running the tests again
