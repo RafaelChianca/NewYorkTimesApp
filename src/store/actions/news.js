@@ -10,7 +10,7 @@ export const listScienceSucceeded = (scienceList) => ({
     payload: { scienceList },
 })
 
-export const listScienceFailed = () =>({
+export const listScienceFailed = () => ({
     type: scienceTypes.FAILED,
 })
 
@@ -24,6 +24,6 @@ export const listTechnologySucceeded = (technologyList) => ({
     payload: { technologyList },
 })
 
-export const listTechnologyFailed = () =>({
+export const listTechnologyFailed = () => ({
     type: technologyTypes.FAILED,
 })

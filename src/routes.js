@@ -10,7 +10,7 @@ const Tab = createBottomTabNavigator();
 function Routes() {
     return (
         <NavigationContainer>
-             <Tab.Navigator
+            <Tab.Navigator
                 initialRouteName="Technology"
                 tabBarOptions={{
                     keyboardHidesTabBar: true,
@@ -23,21 +23,21 @@ function Routes() {
                     activeTintColor: 'black'
                 }}
             >
-                <Tab.Screen 
+                <Tab.Screen
                     name="Technology"
                     component={Technology}
                     options={{
                         tabBarIcon: ({ focused }) => (
-                            <Unicons.UilLightbulbAlt size={28} color={focused ? 'black' : 'lightgrey'}/>
+                            <Unicons.UilLightbulbAlt size={28} color={focused ? 'black' : 'lightgrey'} />
                         ),
                     }}
                 />
-                <Tab.Screen 
+                <Tab.Screen
                     name="Science"
                     component={Science}
                     options={{
                         tabBarIcon: ({ focused }) => (
-                            <Unicons.UilMicroscope size={28} color={focused ? 'black' : 'lightgrey'}/>
+                            <Unicons.UilMicroscope size={28} color={focused ? 'black' : 'lightgrey'} />
                         ),
                     }}
                 />

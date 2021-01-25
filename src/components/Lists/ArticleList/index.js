@@ -9,12 +9,12 @@ export default function ArticleList({ articles, reloadFunction }) {
     if (reloadFunction) {
       reloadFunction();
     }
-  },[reloadFunction]);
+  }, [reloadFunction]);
 
   return (
     <FlatList
       data={articles}
-      renderItem={({item}) => <ArticleListItem article={item} />}
+      renderItem={({ item }) => <ArticleListItem article={item} />}
       keyExtractor={(item) => item.created_date}
       showsVerticalScrollIndicator={false}
       ListEmptyComponent={

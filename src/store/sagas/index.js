@@ -5,9 +5,9 @@ import { scienceTypes, technologyTypes } from '../actionTypes';
 import * as NewsActions from '../actions/news';
 import { apiKey } from '../../settings/apiSetup';
 
-function * listTechnologyNews ( action ) {
+function* listTechnologyNews(action) {
     try {
-        const response = yield call(api.get,`technology.json?api-key=${apiKey}`);
+        const response = yield call(api.get, `technology.json?api-key=${apiKey}`);
         yield put(NewsActions.listTechnologySucceeded(response.data.results));
     } catch (error) {
         Alert.alert("Error loading list!", error.message);
@@ -15,9 +15,9 @@ function * listTechnologyNews ( action ) {
     }
 }
 
-function * listScienceNews ( action ) {
+function* listScienceNews(action) {
     try {
-        const response = yield call(api.get,`science.json?api-key=${apiKey}`);
+        const response = yield call(api.get, `science.json?api-key=${apiKey}`);
         yield put(NewsActions.listScienceSucceeded(response.data.results));
     } catch (error) {
         Alert.alert("Error loading list!", error.message);
@@ -25,8 +25,8 @@ function * listScienceNews ( action ) {
     }
 }
 
-function * mySaga () {
-    return yield all ([
+function* mySaga() {
+    return yield all([
         takeLatest(technologyTypes.REQUESTED, listTechnologyNews),
         takeLatest(scienceTypes.REQUESTED, listScienceNews),
     ])

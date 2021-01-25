@@ -7,21 +7,21 @@ const INITIAL_STATE = {
     science: [],
 }
 
-function news (state = INITIAL_STATE, action) {
+function news(state = INITIAL_STATE, action) {
 
-    switch(action.type){
+    switch (action.type) {
         case technologyTypes.REQUESTED:
-            return {...state, loading: true }
+            return { ...state, loading: true }
         case technologyTypes.SUCCEEDED:
-            return {...state, error: false, loading: false, technology: action.payload.technologyList }
+            return { ...state, error: false, loading: false, technology: action.payload.technologyList }
         case technologyTypes.FAILED:
-            return {...state, error: true, loading: false }
+            return { ...state, error: true, loading: false }
         case scienceTypes.REQUESTED:
-            return {...state, loading: true }
+            return { ...state, loading: true }
         case scienceTypes.SUCCEEDED:
-            return {...state, error: false, loading: false, science: action.payload.scienceList }
+            return { ...state, error: false, loading: false, science: action.payload.scienceList }
         case scienceTypes.FAILED:
-            return {...state, error: true, loading: false }
+            return { ...state, error: true, loading: false }
         default:
             return state;
     }

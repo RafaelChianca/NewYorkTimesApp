@@ -13,11 +13,11 @@ import {
 
 export default function ArticleModal({ modalVisible, setModalVisible, article }) {
 
-  function closeModal () {
+  function closeModal() {
     setModalVisible(false);
   }
 
-  function openURL () {
+  function openURL() {
     if (Linking.canOpenURL(article.url)) {
       Linking.openURL(article.url);
     }

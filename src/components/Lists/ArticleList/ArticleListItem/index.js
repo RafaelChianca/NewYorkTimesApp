@@ -3,7 +3,7 @@ import FastImage from 'react-native-fast-image';
 import ArticleModal from '../../../Modals/ArticleModal';
 import { ArticleContainer, ArticleImage, Title, Abstract } from './styles';
 
-export default function ArticleListItem ({ article }) {
+export default function ArticleListItem({ article }) {
 
     const [modalVisible, setModalVisible] = useState(false);
 
@@ -11,7 +11,7 @@ export default function ArticleListItem ({ article }) {
         <>
             {article &&
                 <>
-                    <ArticleContainer onPress={() => {setModalVisible(true)}}>
+                    <ArticleContainer onPress={() => { setModalVisible(true) }}>
                         <Title numberOfLines={2}>{article.title ? article.title : ''}</Title>
                         <ArticleImage
                             source={{

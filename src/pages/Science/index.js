@@ -18,7 +18,7 @@ export default function Science() {
         setScienceNews(science);
     }, [science])
 
-    function requestScience () {
+    function requestScience() {
         dispatch(listScienceRequested());
     }
 

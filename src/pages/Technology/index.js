@@ -20,7 +20,7 @@ export default function Technology() {
         }
     }, [technology])
 
-    function requestTechnology () {
+    function requestTechnology() {
         dispatch(listTechnologyRequested());
     }
 
